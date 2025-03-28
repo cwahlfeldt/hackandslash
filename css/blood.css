@@ -1,0 +1,61 @@
+/* Blood droplet animation */
+.blood-droplet {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: #b30000;
+    border-radius: 50% 50% 45% 45%;
+    opacity: 0.8;
+    z-index: 5;
+    animation: drip linear infinite;
+    transform-origin: top center;
+}
+
+.bloody-char {
+    color: #b30000;
+    text-shadow: 0 0 5px #ff0000;
+    position: relative;
+}
+
+.bloody-char::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 2px;
+    height: 0;
+    background-color: #b30000;
+    animation: charDrip 3s ease-in infinite;
+}
+
+@keyframes drip {
+    0% {
+        transform: scaleY(1);
+        top: 0;
+        opacity: 0.8;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scaleY(1.5);
+        top: 100px;
+        opacity: 0;
+    }
+}
+
+@keyframes charDrip {
+    0% {
+        height: 0;
+    }
+
+    50% {
+        height: 15px;
+    }
+
+    100% {
+        height: 0;
+    }
+}

@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function () {
         left: 0;
         right: 0;
         bottom: 0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         opacity: 0;
         transition: opacity 0.3s ease;
         pointer-events: none;
@@ -58,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Calculate rotation amounts with diminishing returns for more natural movement
         // The further the mouse is, the less additional rotation is applied
-        const rotationFactor = Math.min(distance / 500, 1);
+        const rotationFactor = Math.min(distance / 2500, 1);
         const rotateY = (mouseX / distance) * maxRotation * rotationFactor;
         const rotateX = (mouseY / distance) * -maxRotation * rotationFactor;
 
@@ -84,3 +83,4 @@ document.addEventListener('DOMContentLoaded', function () {
         skullCenterY = skullRect.top + skullRect.height / 2;
     });
 });
+

@@ -174,10 +174,11 @@ code {
 
 .logo-container {
     position: absolute;
-    bottom: 5rem;
+    bottom: 6rem;
     scale: 0.9;
+    user-select: none;
 }
 
-.skull-container {
-    scale: 1.1;
+.skull-container code {
+    user-select: none;
 }

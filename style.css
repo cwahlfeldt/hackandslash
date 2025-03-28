@@ -176,9 +176,11 @@ code {
     position: absolute;
     bottom: 6rem;
     scale: 0.9;
+    float: inline-start;
     user-select: none;
 }
 
 .skull-container code {
     user-select: none;
+    transition: all 200ms ease-in-out;
 }
